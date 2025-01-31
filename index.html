@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Rabbit Facts</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        header {
+            background-color: #262626;
+            color: #fff;
+            padding: 1.5em 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            background-color: #262626;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+        }
+
+
+        #fact-container {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #rabbit-fact {
+            font-size: 1.2em;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        button:hover {
+            background-color: #2c66bf;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #262626;
+            color: #888;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cute Rabbit Facts</h1>
+    </header>
+    <main>
+        <section>
+            <div id="fact-container">
+                <p id="rabbit-fact">Click the button to see a cute rabbit fact!</p>
+            </div>
+            <button id="factButton">Show Me a Fact</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cute Rabbit Facts</p>
+    </footer>
+    <script>
+        const rabbitFacts = {
+            "cute_rabbit_facts": [
+                {
+                    "fact_number": 1,
+                    "fact": "They have a \\\"binky\\\": When rabbits are happy, they jump in the air and twist their bodies. This adorable move is called a \\\"binky,\\\" and it's like their way of showing pure joy."
+                },
+                {
+                    "fact_number": 2,
+                    "fact": "Their noses twitch a lot: Rabbits' noses are constantly wiggling, which is super cute to watch. They twitch when they're sniffing around and exploring."
+                },
+                {
+                    "fact_number": 3,
+                    "fact": "They purr when happy: Just like cats, some rabbits purr when they are content and getting gentle pets. It's a soft, gentle rumble that is so sweet."
+                },
+                {
+                    "fact_number": 4,
+                    "fact": "They have adorable whiskers: Those long, cute whiskers aren't just for show; they help rabbits feel their way around. They make their faces extra endearing!"
+                },
+                {
+                    "fact_number": 5,
+                    "fact": "They groom each other: Rabbits show affection by grooming each other. They'll lick and nibble each other's fur, and it's heartwarming to watch them bond."
+                },
+                {
+                    "fact_number": 6,
+                    "fact": "They love to flop: When they're comfortable and relaxed, rabbits often flop onto their sides. This can look dramatic, but it just means they're feeling safe and content."
+                },
+                {
+                    "fact_number": 7,
+                    "fact": "They can be litter-box trained: You can teach rabbits to use a litter box, making them easier to care for and extra tidy, which adds to their cuteness."
+                },
+                {
+                    "fact_number": 8,
+                    "fact": "They have big, expressive eyes: Rabbits have large, beautiful eyes that come in various colors, and they can convey a range of emotions, from curiosity to contentment."
+                },
+                {
+                    "fact_number": 9,
+                    "fact": "They're crepuscular: They are most active at dawn and dusk, and their playful antics during these times are truly delightful to observe."
+                },
+                {
+                    "fact_number": 10,
+                    "fact": "Baby bunnies are called kittens: Just like cats, baby rabbits are called kittens, which adds to their undeniable charm."
+                }
+            ]
+        };
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const facts = rabbitFacts.cute_rabbit_facts;
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const randomFact = facts[randomIndex].fact;
+            document.getElementById('rabbit-fact').textContent = randomFact;
+        });
+    </script>
+</body>
+</html>
